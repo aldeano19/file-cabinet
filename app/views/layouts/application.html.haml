@@ -20,8 +20,12 @@
         - else
           = link_to "Log in", new_user_session_path
 
-  %p.notice= notice
-  %p.alert= alert
+  -#.alert{ class: "notice"}
+  -#.alert{ class: "alert"}
+
+  .wrapper_with_padding
+    %p.notice= notice
+    %p.alert= alert
 
   = yield
 
