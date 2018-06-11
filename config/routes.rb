@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
 
+  root 'welcome#index'
+
   resources :docs
 
   # This create a different root path if there is an authenticated user already
@@ -11,5 +13,4 @@ Rails.application.routes.draw do
   end
 
   # Root path when there is no authenticated user
-  root 'welcome#index'
 end
