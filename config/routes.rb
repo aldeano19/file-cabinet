@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
 
-  resources :docs
 
   # TODO: Fix root routes when user authenticated vs when not auth.
   root 'welcome#index'
@@ -14,6 +13,7 @@ Rails.application.routes.draw do
     root 'docs#index', as: 'authenticated_root'
   end
 
+  resources :docs
 
   # Root path when there is no authenticated user
 end

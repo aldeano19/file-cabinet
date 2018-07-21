@@ -8,7 +8,12 @@
   = csrf_meta_tags
 
 %body
+
+
+
   %header
+
+
     .header_inner
       = link_to "FileCabinet", root_path, id: "logo"
 
@@ -20,12 +25,17 @@
         - else
           = link_to "Log in", new_user_session_path
 
-  -#.alert{ class: "notice"}
-  -#.alert{ class: "alert"}
+        &nbsp;&nbsp; | &nbsp;&nbsp;
+
+        = link_to "https://github.com/aldeano19/file-cabinet" do
+          Sourcecode
+          = fa_icon "github 2x"
 
   .wrapper_with_padding
     %p.notice= notice
     %p.alert= alert
+
+
 
   = yield
 
