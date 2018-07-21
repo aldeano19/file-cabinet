@@ -50,5 +50,3 @@ class DocsController < ApplicationController
     end
 
 end
-
-just fyi,
